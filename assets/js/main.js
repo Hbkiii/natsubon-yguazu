@@ -81,3 +81,18 @@
 		}
 
 })(jQuery);
+
+// (function(){
+
+// 	document.addEventListener('DOMContentLoaded', function(){
+
+// 		var map = L.map('map').setView([-25.459754, -55.004081], 15);
+
+// 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// 		}).addTo(map);
+
+// 		L.marker([-25.459754, -55.004081]).addTo(map)
+// 			.bindPopup("Natsubon Yguazú 2024").openPopup();
+// 	});
+// })();
