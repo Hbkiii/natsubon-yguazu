@@ -82,6 +82,18 @@
 
 })(jQuery);
 
+//jquery
+$(function(){
+
+	$('.cuenta-regresiva').countdown('2024/12/07 00:00:00', function(event){
+		$('#dias').html(event.strftime('%D'));
+		$('#horas').html(event.strftime('%H'));
+		$('#minutos').html(event.strftime('%M'));
+		$('#segundos').html(event.strftime('%S'));
+	});
+
+});
+
 // (function(){
 
 // 	document.addEventListener('DOMContentLoaded', function(){

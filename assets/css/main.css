@@ -3998,6 +3998,22 @@ input, select, textarea {
 		background-color: #1d242a;
 	}
 
-	#map { 
+	/* #map { 
 		height: 420px;
 	}
+	 */
+
+	 div.cuenta-regresiva ul li{
+		text-transform: uppercase;
+		font-size: 2rem;
+		text-align: center;
+		color: #eb341c;
+	}
+	
+	@media only screen and (min-width: 768px){
+		div.cuenta-regresiva ul li{
+			width: 25%;
+			float: left;
+		}
+	}
+	
