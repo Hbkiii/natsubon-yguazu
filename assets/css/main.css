@@ -4030,18 +4030,24 @@ input, select, textarea {
 	}
 	 */
 
-	 .cuenta-regresiva{
-		margin: 0;
-		padding: 0;
-	 }
-	.cuenta-regresiva ul li{
+
+	.cuenta-regresiva h3{
+		padding: 50px 0 25px 0 ;
 		background-color: rgba(0, 0, 0, 0.572);
-		padding-left: 30px;
+		margin-bottom: 0;
+
+	}
+	.cuenta-regresiva ul{
+		padding: 0;
+	}
+	p.numero{
+		margin-bottom: 50px;
 	}
 	
 	div.cuenta-regresiva ul li{
 		list-style-type: none;
-		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.572);
+		padding:25px 0px 50px 0px;
 		text-transform: uppercase;
 		font-family: "Open Sans", Helvetica, sans-serif;
 		font-size: 3rem;
