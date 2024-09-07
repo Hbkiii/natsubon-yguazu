@@ -4029,12 +4029,18 @@ input, select, textarea {
 		height: 420px;
 	}
 	 */
+
+	 .cuenta-regresiva{
+		margin: 0;
+		padding: 0;
+	 }
 	.cuenta-regresiva ul li{
 		background-color: rgba(0, 0, 0, 0.572);
-		margin: 0;
+		padding-left: 30px;
 	}
 	
 	div.cuenta-regresiva ul li{
+		list-style-type: none;
 		padding: 20px;
 		text-transform: uppercase;
 		font-family: "Open Sans", Helvetica, sans-serif;
@@ -4061,6 +4067,7 @@ input, select, textarea {
 	#countdown.activo {
 		display: block;
 	}
+	
 	div.countdown ul li{
 		text-transform: uppercase;
 		font-family: "Open Sans", Helvetica, sans-serif;
