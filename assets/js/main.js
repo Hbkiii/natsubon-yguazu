@@ -10,7 +10,10 @@
 		$body = $('body'),
 		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
-		$header = $('#header');
+		$header = $('#header'),
+		$countdown = $('#countdown');
+		var combinedOffset = $header.outerHeight() + $countdown.outerHeight();
+
 
 	// Breakpoints.
 		breakpoints({
@@ -47,9 +50,8 @@
 		$('.scrolly')
 			.scrolly({
 				speed: 1500,
-				offset: $header.outerHeight()
+				offset:combinedOffset
 			});
-
 	// Menu.
 		$('#menu')
 			.append('<a href="#menu" class="close"></a>')
@@ -79,17 +81,43 @@
 			});
 
 		}
+		if ($banner.length > 0
+			&&	$countdown.hasClass('none')) {
+	
+				$window.on('resize', function() { $window.trigger('scroll'); });
+				
+				$banner.scrollex({
+					bottom:		$countdown.outerHeight() + 1,
+					terminate:	function() { $countdown.removeClass('none'); },
+					enter:		function() { $countdown.addClass('none'); },
+					leave:		function() { $countdown.removeClass('none'); }
+				});
+	
+			}
+
+		
 
 })(jQuery);
 
 //jquery
 $(function(){
 
-	$('.cuenta-regresiva').countdown('2024/12/07 00:00:00', function(event){
+	$('.cuenta-regresiva').countdown('2024/12/07 18:00:00', function(event){
 		$('#dias').html(event.strftime('%D'));
 		$('#horas').html(event.strftime('%H'));
 		$('#minutos').html(event.strftime('%M'));
 		$('#segundos').html(event.strftime('%S'));
+	});
+
+});
+
+$(function(){
+
+	$('.countdown').countdown('2024/12/07 18:00:00', function(event){
+		$('#day').html(event.strftime('%D'));
+		$('#hour').html(event.strftime('%H'));
+		$('#min').html(event.strftime('%M'));
+		$('#seg').html(event.strftime('%S'));
 	});
 
 });
